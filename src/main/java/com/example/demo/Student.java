@@ -1,15 +1,50 @@
 package com.example.demo;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import javax.persistence.*;
 
-@Entity
+@Entity(name = "Student")
+@Table(
+        name="student",
+        uniqueConstraints = {
+                @UniqueConstraint(name="student_email_unique" ,columnNames = "email")
+        }
+
+)
 public class Student {
 
     @Id
+    @SequenceGenerator(
+            name = "student_sequence",
+            sequenceName = "student_sequence",
+            allocationSize = 1
+    )
+    @GeneratedValue(
+            strategy = GenerationType.SEQUENCE,
+            generator = "student_sequence"
+    )
+
+    @Column(
+            name = "id",
+            updatable = false
+    )
     private long id;
+
+    @Column(
+            name = "first_name",
+            nullable = false
+    )
     private String firstName;
+
+    @Column(
+            name = "last_name",
+            nullable = false
+    )
     private String lastName;
+
+    @Column(
+            unique = true,
+            nullable = false
+    )
     private String email;
     private Integer age;
 
