@@ -60,4 +60,10 @@ class StudentRepositoryTest {
         List<Student> studentList = studentRepository.findAll();
         System.out.println(studentList);
     }
+
+    @Test
+    public void printStudentByEmail(){
+        Student s = studentRepository.getStudentByEmailAddress("a@gmail.com");
+        System.out.println(s);
+    }
 }
