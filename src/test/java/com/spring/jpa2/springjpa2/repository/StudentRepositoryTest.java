@@ -49,6 +49,13 @@ class StudentRepositoryTest {
     }
 
     @Test
+    public void printStudentByFirstname(){
+
+        List<Student> students = studentRepository.findByFirstName("bhavin");
+        System.out.println(students);
+    }
+
+    @Test
     public void find(){
         List<Student> studentList = studentRepository.findAll();
         System.out.println(studentList);
