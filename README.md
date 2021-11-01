@@ -20,11 +20,11 @@ In this course you learn everything there is to learn about Spring Data JPA allo
 ## Check out branches
 
 - `git checkout main` - the main branch is starting point
-- `git checkout section-1`
-- `git checkout section-2`
-- `git checkout section-3`
-- `git checkout section-4`
-- `git checkout section-5`
-- `git checkout section-6`
-- `git checkout section-7`
-- `git checkout section-1`
+- `git checkout version1`
+- `git checkout version2`
+- `git checkout version3`
+- `git checkout version4`
+- `git checkout version5`
+- `git checkout version6`
+- `git checkout version7`
+- `git checkout version8`
