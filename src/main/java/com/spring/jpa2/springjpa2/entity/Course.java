@@ -31,7 +31,7 @@ public class Course {
     private int credit;
 
     @OneToOne(
-            mappedBy = "course"
+            mappedBy = "course" // bi direction relationship telling joined by course in courseMaterial
     )
     private CourseMaterial courseMaterial;
 }
